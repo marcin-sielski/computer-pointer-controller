@@ -285,9 +285,9 @@ class ComputerPointerController:
         
             facialLanmarksDetection.wait()
             outputs = facialLanmarksDetection.outputs()
-            if outputs[0].shape[0] == 0 or outputs[0].shape[1] == 0 or \
-                outputs[0].shape[2] < 3 or outputs[1].shape[0] == 0 or \
-                outputs[1].shape[1] == 0 or outputs[1].shape[2] < 3:
+            if outputs[0].shape[0] < 60 or outputs[0].shape[1] < 60 or \
+                outputs[0].shape[2] < 3 or outputs[1].shape[0] < 60 or \
+                outputs[1].shape[1] < 60 or outputs[1].shape[2] < 3:
                 logging.warning('Image too small')
                 continue
             headPoseEstimation.wait()
