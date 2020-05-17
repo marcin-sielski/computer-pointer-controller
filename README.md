@@ -12,7 +12,8 @@ following inputs:
 
 ## Project Set Up and Installation
 
-Project is based on [Intel OpenVINO 2020.1](https://docs.openvinotoolkit.org/)
+Project is based on
+[Intel OpenVINO 2020.1](https://docs.openvinotoolkit.org/2020.1/index.html)
 toolkit so make sure it is installed before moving on.
 
 Project installation procedure is following:
