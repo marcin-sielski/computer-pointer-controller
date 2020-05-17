@@ -18,7 +18,7 @@ toolkit so make sure it is installed before moving on.
 Project installation procedure is following:
 
 ```bash
-$ git clone https://github.com/marcin-sielski/computer-pointer-controller
+$ git clone https://github.com/marcin-sielski/computer-pointer-controller.git
 $ cd computer-pointer-controller
 $ ./install.sh
 ```  
@@ -110,7 +110,7 @@ The benchmark tests were executed on the system equipped with:
 
 The goal of following benchmark tests is to find out the best parameters that leads to the shortest inference time for the single loop.
 
-1. Benchmark with default parameters (reference)
+1. Benchmark with use of default parameters (reference)
 
     ```bash
    $ ./control_pointer_with_image.sh -p
@@ -322,7 +322,7 @@ seems to match the obtained result.
 
 Let's run the benchmarks on the video file to confirm the intuition.
 
-1. Benchmark with default parameters (reference)
+1. Benchmark with use of default parameters (reference)
 
    ```bash
    $ ./control_pointer_with_video.sh
@@ -368,7 +368,7 @@ Project uses two techniques to improve performance of the inference and mouse
 movement:
 
 1. First technique requires to find models that can run inference in parallel.
-As indicated in the [Benchmark](#benchmark) section head pose estimation and
+As indicated in the [Benchmarks](#benchmarks) section head pose estimation and
 facial landmarks detection models can run inference in parallel because their
 inputs and outputs do not rely on each other. Head pose asynchronous inference
 was run as the first because the model is ~5x heavier then facial landmarks
