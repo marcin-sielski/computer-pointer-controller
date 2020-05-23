@@ -60,8 +60,9 @@ class Model:
         self._model_structure = model_name+'.xml'
         self._device = device
         
+        core = IECore()
         try:
-            self._model=IENetwork(self._model_structure, self._model_weights)
+            self._model=core.read_network(self._model_structure, self._model_weights)
         except Exception as e:
             raise ValueError("Could not Initialise the network. "\
                 "Have you enterred the correct model path?")
@@ -73,7 +74,6 @@ class Model:
         self._output_names = []
         for output_name in iter(self._model.outputs):
             self._output_names.append(output_name)
-        core = IECore()
         try:
             supported_layers = core.query_network(network=self._model, \
                 device_name=device)
