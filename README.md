@@ -13,7 +13,7 @@ following inputs:
 ## Project Set Up and Installation
 
 Project is based on
-[Intel OpenVINO 2020.1](https://docs.openvinotoolkit.org/2020.1/index.html)
+[Intel OpenVINO 2020.2](https://docs.openvinotoolkit.org/2020.2/index.html)
 toolkit so make sure it is installed before moving on.
 
 Project installation procedure is following:
@@ -109,7 +109,7 @@ The benchmark tests were executed on the system equipped with:
 - 16 GB of RAM,
 - Intel Neural Compute Stick 2 attached over USB 2.0 port.
 
-The goal of following benchmark tests is to find out the best parameters that leads to the shortest inference time for the single loop.
+The goal of following benchmark tests is to find out the best parameters that leads to the shortest inference time for the single loop step.
 
 1. Benchmark with use of default parameters (reference)
 
@@ -294,8 +294,8 @@ The expectation is that 3rd benchmark should show the best inference time and
 the worst loading time when comparing to 1st and 2nd. Loading of the model on
 GPU or VPU takes additional time but is done only once. 2nd benchmark should
 improve inference time over 1st benchmark because quantized models were used
-scarifying slightly precision of computer pointer controller. The intuition
-seems to match the obtained result.
+scarifying slightly precision of computer pointer controller application.
+The intuition seems to match the obtained result.
 
 1. Results for the first benchmark:
 
@@ -321,7 +321,7 @@ seems to match the obtained result.
    Frames per second: 11.997196852465768
    ```
 
-Let's run the benchmarks on the video file to confirm the intuition.
+Let's run the benchmark tests on the video file to confirm the intuition.
 
 1. Benchmark with use of default parameters (reference)
 
@@ -370,7 +370,7 @@ movement:
 
 1. First technique requires to find models that can run inference in parallel.
 As indicated in the [Benchmarks](#benchmarks) section head pose estimation and
-facial landmarks detection models can run inference in parallel because their
+facial landmarks detection models inference can be run in parallel because their
 inputs and outputs do not rely on each other. Head pose asynchronous inference
 was run as the first because the model is ~5x heavier then facial landmarks
 detection model (according to documentation). Wait function for facial landmarks
