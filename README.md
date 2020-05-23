@@ -18,7 +18,7 @@ toolkit so make sure it is installed before moving on.
 
 Project installation procedure is following:
 
-```bash
+```
 $ git clone https://github.com/marcin-sielski/computer-pointer-controller.git
 $ cd computer-pointer-controller
 $ ./install.sh
@@ -28,7 +28,7 @@ Project removal procedure is following:
 
 __Note:__ Make sure to exit virtual environment before moving on.
 
-```bash
+```
 $ ./uninstall.sh
 ```
 
@@ -39,7 +39,7 @@ the commands are executed in virtual environment.
 
 __Note:__ Enter the virtual environment by executing:
 
-```bash
+```
 $ cd src
 $ pipenv shell
 
