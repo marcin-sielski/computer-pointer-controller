@@ -62,7 +62,7 @@ Computer Pointer Controller supports number of parameters that enables:
 - debugging,
 - enhancing inference performance.
 
-```bash
+```
 $ python3 computer_pointer_controller.py --help
 usage: computer_pointer_controller.py [-h] -i INPUT [-o OUTPUT] [-d DEVICE]
                                       [-g [DEBUG]] [-p [PROFILER]]
@@ -113,7 +113,7 @@ The goal of following benchmark tests is to find out the best parameters that le
 
 1. Benchmark with use of default parameters (reference)
 
-    ```bash
+    ```
    $ ./control_pointer_with_image.sh -p
    Press 'esc' to exit
    Total loading time of the models: 0.45763206481933594 s
@@ -172,7 +172,7 @@ The goal of following benchmark tests is to find out the best parameters that le
 2. Benchmark with use of FP32-INT8 precision for selected models executed on
 CPU:
 
-   ```bash
+   ```
    $ ./control_pointer_with_image.sh -p -q FP32-INT8
    Press 'esc' to exit
    Total loading time of the models: 0.4643588066101074 s
@@ -231,7 +231,7 @@ CPU:
 3. Benchmark with use of FP32-INT8 precision for selected models executed on CPU
 and one model offloaded to VPU device:
 
-   ```bash
+   ```
    $ ./control_pointer_with_image.sh -p -q FP32-INT8 -d MYRIAD
    Press 'esc' to exit
    2020-05-17 14:42:04,321 WARNING: Unsupported layers found: ['data', 'angle_y_fc/flatten_fc_input/Cast_14125_const', 'angle_r_fc/flatten_fc_input/Cast_14127_const', 'angle_p_fc/flatten_fc_input/Cast_14129_const']
@@ -299,7 +299,7 @@ seems to match the obtained result.
 
 1. Results for the first benchmark:
 
-   ```bash
+   ```
    Total loading time of the models: 0.45763206481933594 s
    Average inference time: 0.08859419822692871 s
    Frames per second: 11.287420847114166
@@ -307,7 +307,7 @@ seems to match the obtained result.
 
 2. Results for the second benchmark:
 
-   ```bash
+   ```
    Total loading time of the models: 0.4643588066101074 s
    Average inference time: 0.08828258514404297 s
    Frames per second: 11.327262317572458
@@ -315,7 +315,7 @@ seems to match the obtained result.
 
 3. Results for the third benchmark:
 
-   ```bash
+   ```
    Total loading time of the models: 2.0119919776916504 s
    Average inference time: 0.08335280418395996 s
    Frames per second: 11.997196852465768
@@ -325,7 +325,7 @@ Let's run the benchmarks on the video file to confirm the intuition.
 
 1. Benchmark with use of default parameters (reference)
 
-   ```bash
+   ```
    $ ./control_pointer_with_video.sh
    Press 'esc' to exit
    Total loading time of the models: 0.46290087699890137 s
@@ -336,7 +336,7 @@ Let's run the benchmarks on the video file to confirm the intuition.
 2. Benchmark with use of FP32-INT8 precision for selected models executed on
 CPU:
 
-   ```bash
+   ```
    $ ./control_pointer_with_video.sh -q FP32-INT8
    Press 'esc' to exit
    Total loading time of the models: 0.4582047462463379 s
@@ -347,7 +347,7 @@ CPU:
 3. Benchmark with use of FP32-INT8 precision for selected models executed on CPU
 and one model offloaded to VPU device:
 
-   ```bash
+   ```
    $ ./control_pointer_with_video.sh -q FP32-INT8 -d MYRIAD
    Press 'esc' to exit
    2020-05-17 15:06:26,007 WARNING: Unsupported layers found: ['data', 'angle_y_fc/flatten_fc_input/Cast_14125_const', 'angle_r_fc/flatten_fc_input/Cast_14127_const', 'angle_p_fc/flatten_fc_input/Cast_14129_const']
