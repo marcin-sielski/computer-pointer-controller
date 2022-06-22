@@ -1,4 +1,4 @@
-numpy==1.18.1
+numpy==1.22.0
 PyAutoGUI==0.9.50
 ipython==7.13.0
 line-profiler==3.0.2
